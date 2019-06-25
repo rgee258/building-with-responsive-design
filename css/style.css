@@ -1,0 +1,1063 @@
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Universal */
+
+body {
+  min-width: 500px;
+  background-color: #f7f7f7;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navigation */
+
+nav .logo, nav .navbars {
+  display: inline-block;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.5%;
+  font-family: "Arial";
+}
+
+.logo {
+  flex-basis: 10%;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbars {
+  flex-basis: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .navbars {
+    flex-basis: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+  }
+}
+
+.navbars ul li {
+  display: inline-block;
+}
+
+.navbars ul li a {
+  color: #aaa;
+}
+
+.nav-links, .nav-extras {
+  padding-left: 2%;
+}
+
+.nav-links {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+.nav-links li {
+  padding: 1.5% 0;
+  margin-right: .5%;
+  font-size: .8rem;
+}
+
+.nav-extras {
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-extras {
+    height: 100%;
+  }
+}
+
+.nav-extras li {
+  padding: 2% 0;
+  margin-right: 2%;
+  font-size: .85rem;
+}
+
+@media (max-width: 768px) {
+  .nav-extras a {
+    display: none;
+  }
+}
+
+.nav-extras .search, .nav-extras .hamburger {
+  width: 5%;
+  display: inline-block;
+  float: right;
+  margin-right: 0;
+  border-left: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .nav-extras .search, .nav-extras .hamburger {
+    height: 100%;
+    width: 12%;
+  }
+}
+
+.search:hover, .hamburger:hover {
+  cursor: pointer;
+}
+
+.search-icon, .hamburger-icon {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .search-icon, .hamburger-icon {
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.nav-extras .hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-extras .hamburger {
+    display: inline-block;
+  }
+}
+
+.search-icon img, .hamburger-icon img {
+  width: 20px;
+}
+
+@media (max-width: 768px) {
+  .search-icon img, .hamburger-icon img {
+    width: 20px;
+    height: 20px;
+    margin-top: 5%;
+  }
+}
+
+/* Featured Articles */
+
+.featured {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2.5%;
+}
+
+@media (max-width: 768px) {
+  .featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-between;
+  }
+}
+
+.feature-main {
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: inset 0 -100px 100px rgba(0,0,0,.7);
+  background-image: url("../images/shutterstock_70213219-NASA-796x398.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .feature-main {
+    padding-top: 2%;
+  }
+}
+
+.feature-col {
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+}
+
+.feature-other {
+  height: 175px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: inset 0 -50px 200px rgba(0,0,0,.7);
+  background-size: cover;
+}
+
+.feature-other:first-of-type {
+  background-image: url("../images/fakenews-796x417.jpg");
+}
+
+.feature-other:last-of-type {
+  background-image: url("../images/PiTop-62-Cropped-796x419.jpg");
+}
+
+@media (max-width: 768px) {
+  .feature-other {
+    margin-top: 2%;
+  }
+}
+
+.feature-other:nth-child(2) {
+  margin-top: 2%;
+}
+
+.feature-content {
+  margin-left: 2%;
+  margin-bottom: 3%;
+  align-self: flex-end;
+}
+
+.feature-main, .feature-other {
+  font-family: arial;
+  color: white;
+}
+
+.feature-main h1, .feature-other h1 {
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.feature-main h1 {
+  font-size: 2.25rem;
+  margin: 2% 0;
+}
+
+@media (max-width: 1024px) {
+  .feature-main h1 {
+    font-size: 1.75rem;
+  }
+}
+
+.feature-main h1 a {
+  color: white;
+}
+
+.feature-main p:last-of-type {
+  color: #aaa;
+  font-size: .75rem;
+}
+
+.feature-col h1, .feature-col h1 {
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.feature-col h1 {
+  font-size: 1.75rem;
+  margin: 2% 0;
+}
+
+@media (max-width: 1024px) {
+  .feature-col h1 {
+    font-size: 1.1rem;
+  }
+}
+
+.feature-col h1 a {
+  color: white;
+}
+
+.feature-col p:last-of-type {
+  color: #aaa;
+  font-size: .75rem;
+}
+
+.feature-content p a {
+  color: #aaa;
+}
+
+.feature-content p a:hover {
+  color: white;
+}
+
+/* Content Wrapper */
+
+.content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    width: 95%;
+  }
+}
+
+/* Latest News */
+
+.latest {
+  width: 100%;
+}
+
+.latest h2 {
+  margin-bottom: 2%;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.latest h2 a {
+  color: #f42;
+}
+
+.latest h2 a:hover {
+  color: black;
+}
+
+.latest-articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-around;
+}
+
+.latest-articles article {
+  flex-basis: 24%;
+  float: left;
+}
+
+@media (max-width: 1024px) {
+  .latest-articles article {
+    flex-basis: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-articles article {
+    flex-basis: 100%;
+  }
+
+  .latest-articles img {
+    width: 75px;
+    height: 75px;
+    float: left;
+  }
+}
+
+.latest-articles .placeholder {
+  visibility: hidden;
+}
+
+@media (max-width: 1024px) {
+  .latest-articles .placeholder {
+    visibility: visible;
+  }
+}
+
+.latest-articles article img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .latest-articles article img {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 2%;
+  }
+}
+
+.latest-articles article {
+  margin-bottom: 2%;
+  font-family: "Arial";
+}
+
+.latest-articles article h3 {
+  margin: 2% 0;
+  font-family: "Helvetica";
+  font-weight: bold;
+}
+
+.latest-articles article h3 a {
+  font-size: 1.05rem;
+  color: black;
+}
+
+.latest-articles article h3 a:hover {
+  color: #f42;
+}
+
+.latest-articles article p {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.latest-articles article p a {
+  color: #aaa;
+}
+
+.latest-articles article p a:hover {
+  color: #666;
+}
+
+/* Index Funding */
+
+.funding {
+  width: 100%;
+}
+
+.funding-header h2, .funding-header div {
+  display: inline-block;
+}
+
+.funding-header div a, .funding-header div p {
+  display: inline-block;
+}
+
+.funding-header h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.funding-header h2 a {
+  color: #f42;
+}
+
+.funding-header h2 a:hover {
+  color: black;
+}
+
+.funding-header div {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  vertical-align: bottom;
+}
+
+.funding-header div a, .funding-header div p {
+  color: #f42;
+}
+
+.funding-header div a:hover {
+  color: black;
+}
+
+@media (max-width: 1024px) {
+  .funding-header h2, .funding-header div {
+    display: block;
+  }
+}
+
+.funding-header div {
+  float: right;
+}
+
+@media (max-width: 1024px) {
+  .funding-header div {
+    float: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .funding-header div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .funding-header div a {
+    margin-left: 0;
+    margin-top: 2%;
+    border-left: none;
+  }
+
+  .funding-header div p {
+    display: none;
+  }
+}
+
+.offers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-around;
+}
+
+.offers article {
+  flex-basis: 24%;
+  margin-top: 20px;
+  background-color: #fffaf8;
+}
+
+@media (max-width: 1024px) {
+
+  .offers article:last-of-type {
+    display: none;
+  }
+
+  .offers article {
+    flex-basis: 33%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .offers article:last-of-type {
+    display: none;
+  }
+
+  .offers article {
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
+}
+
+.offer-header {
+  width: 100%;
+}
+
+.offer-header img {
+  float: left;
+  margin: 3% 5% 0 3%;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .offer-header img {
+    float: left;
+    margin: 2% 5% 0 3%;
+    vertical-align: middle;
+  }
+}
+
+.offer-header .company {
+  padding: 3% 0;
+  color: white;
+  font-family: "Helvetica";
+  font-size: 1.1rem;
+  background-color: #ff4422;
+}
+
+.offer-header .company a {
+  color: white;
+  font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  .offer-header .company {
+    padding: 2% 0;
+  }
+}
+
+.offer-header .offer-value {
+  padding: 3% 0;
+  background-color: #ffebe9;
+  font-family: "Arial";
+}
+
+@media (max-width: 768px) {
+  .offer-header .offer-value {
+    padding: 1% 0;
+  }
+}
+
+.offer-value p:first-of-type {
+  margin-top: 2%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.offer-value p:last-of-type {
+  color: #666;
+  margin-bottom: 2%;
+  font-size: .7rem;
+}
+
+.offer-extra {
+  margin-bottom: 5%;
+  font-family: "Arial";
+  font-size: .8rem;
+}
+
+.offer-extra p {
+  margin: 0 3%;
+  margin-top: 3%;
+}
+
+.offer-extra p a {
+  color: #555;
+}
+
+.offer-extra p a:hover {
+  color: black;
+}
+
+.offer-extra p:nth-child(1) {
+  margin-top: 5%;
+}
+
+.offer-extra p:nth-child(2) {
+  margin-bottom: 5%;
+}
+
+.offer-extra p:last-of-type {
+  line-height: 1.3rem;
+}
+
+.offer-extra p span {
+  color: #999;
+}
+
+.offers article .offer-extra hr {
+  border-color: #ffcbc6;
+}
+
+/* Article Categories */
+
+.categories {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-bottom: 7%;
+}
+
+.category {
+  flex-basis: 32%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+@media (max-width: 1024px) {
+  .category {
+    flex-basis: 49%;
+  }
+}
+
+@media (max-width: 768px) {
+  .category {
+    flex-basis: 100%;
+    margin: 2% 0;
+  }
+}
+
+.categories .placeholder {
+  visibility: hidden;
+}
+
+.category h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 3%;
+}
+
+.category h2 a {
+  color: #f42;
+}
+
+.category h2 a:hover {
+  color: black;
+}
+
+.popular {
+  height: 175px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-size: cover;
+  box-shadow: inset 25px -50px 125px rgba(0,0,0,.7);
+}
+
+.popular-content {
+  align-self: flex-end;
+  margin: 0 3%;
+  padding-bottom: 3%;
+  font-family: "Arial";
+}
+
+.popular-content p:first-of-type {
+  font-size: 0.8rem;
+}
+
+.popular-content h1 {
+  margin: 1% 0;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.popular-content h1 a {
+  color: white;
+  font-family: "Helvetica";
+}
+
+.popular-content p:last-of-type {
+  color: #aaa;
+  font-size: .75rem;
+}
+
+.popular-content p a {
+  color: #aaa;
+}
+
+.popular-content p a:hover {
+  color: white;
+}
+
+.category-latest {
+  display: flex;
+  flex-direction: row;
+  color: #f42;
+  font-family: 'Helvetica';
+  background-color: #ffebe9;
+}
+
+.category-latest div, .category-latest img {
+  display: inline-block;
+}
+
+.category-latest img {
+  flex-basis: 30%;
+}
+
+@media (max-width: 768px) {
+  .category-latest img {
+    flex-basis: 20%;
+  }
+}
+
+.category-latest-content {
+  flex-basis: 70%;
+  margin: 0 3%;
+  margin-top: 3%;
+  line-height: 1rem;
+}
+
+@media (max-width: 768px) {
+  .category-latest-content {
+    flex-basis: 80%;
+  }
+}
+
+.category-latest-content a {
+  color: #f42;
+  font-weight: bolder;
+}
+
+.category-latest-content a:hover {
+  text-decoration: underline;
+}
+
+.category-latest-content p:first-of-type {
+  margin-bottom: 2%;
+  font-size: .8rem;
+}
+
+.category ul {
+  list-style-type: circle;
+}
+
+.category ul li {
+  padding: 2% 0;
+  margin-left: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  font-family: "Arial";
+  font-size: .85rem;
+  line-height: 1rem;
+  list-style-position: outside;
+}
+
+.category ul li a {
+  color: #555;
+}
+
+.category ul li a:hover {
+  color: black;
+}
+
+.category:nth-of-type(1) .popular {
+  background-image: url("../images/Google-Maps-India-368x276.jpg");
+}
+
+.category:nth-of-type(2) .popular {
+  background-image: url("../images/suhyeon-choi-184102-unsplash-Cropped-368x276.jpg");
+}
+
+.category:nth-of-type(3) .popular {
+  background-image: url("../images/The-Last-Mile-prison-inmate-computer-coding-programming-hed-368x276.jpg");
+}
+
+.category:nth-of-type(4) .popular {
+  background-image: url("../images/carltondance-368x276.jpg");
+}
+
+.category:nth-of-type(5) .popular {
+  background-image: url("../images/download19-368x276.png");
+}
+
+.category:nth-of-type(6) .popular {
+  background-image: url("../images/calibra-368x276.jpg");
+}
+
+.category:nth-of-type(7) .popular {
+  background-image: url("../images/Orion-Doom-Bethesda-hed-368x276.jpg");
+}
+
+.category:nth-of-type(8) .popular {
+  background-image: url("../images/Overwatch-Lootbox-368x276.jpg");
+}
+
+/* Deals */
+
+.deals {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.deals-header {
+  margin-bottom: 2%;
+}
+
+@media (max-width: 768px) {
+  .deals-header {
+    margin-bottom: 5%;
+  }
+}
+
+.deals-header h2, .deals-header div {
+  display: inline-block;
+}
+
+.deals-header div {
+  float: right;
+}
+
+.deals-header h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.deals-header h2 a {
+  color: #f42;
+}
+
+.deals-header h2 a:hover {
+  color: black;
+}
+
+.deals-header div {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  vertical-align: bottom;
+}
+
+.deals-header div a, .funding-header div p {
+  color: #f42;
+}
+
+.deals-header div a:hover {
+  color: black;
+}
+
+.deals-cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.deals-cols .placeholder {
+  visibility: hidden;
+}
+
+.deal {
+  flex-basis: 24%;
+}
+
+@media (max-width: 1024px) {
+  .deal {
+    flex-basis: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .deal {
+    flex-basis: 100%;
+  }
+}
+
+.deal a img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .deal a img {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 3%;
+  }
+}
+
+.deal {
+  margin-bottom: 2%;
+  font-family: "Arial";
+}
+
+.deal h3 {
+  margin: 2% 0;
+  font-family: "Helvetica";
+  font-weight: bold;
+}
+
+.deal h3 a {
+  font-size: 1.05rem;
+  color: black;
+}
+
+.deal h3 a:hover {
+  color: #f42;
+}
+
+.deal p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.deal p span {
+  color: #999;
+  font-size: 0.85rem;
+  text-decoration: line-through;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  text-align: center;
+  color: #aaa;
+  background-color: black;
+}
+
+footer div {
+  padding: 40px 0;
+}
+
+.footer-links {
+  background-color: #131313;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-left: 1%;
+  font-family: sans-serif;
+  font-size: .8rem;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+.footer-links li a:hover {
+  color: white;
+}
+
+.disclaimer p {
+  display: inline;
+  font-family: "Arial";
+  font-size: .8rem;
+}
+
+@media (max-width: 768px) {
+  .disclaimer p {
+    display: block;
+  }
+}
+
+.disclaimer p img:first-of-type {
+  margin-right: .5%;
+}
+
+@media (max-width: 768px) {
+  .disclaimer p img:first-of-type {
+    margin-right: 1%;
+  }
+}
+
+.disclaimer .heart {
+  color: #f42;
+}
