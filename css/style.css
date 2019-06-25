@@ -129,6 +129,10 @@ nav {
   font-size: .8rem;
 }
 
+.nav-links li a:hover {
+  color: white;
+}
+
 .nav-extras {
   background-color: #fff;
 }
